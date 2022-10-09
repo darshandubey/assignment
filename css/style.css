@@ -1,0 +1,211 @@
+/*Nav Bar css*/
+.navbar .navbar-brand-wrapper, .navbar .navbar-menu-wrapper{
+	background-color: #1d3557;
+	height: 100px;
+}
+.page-body-wrapper{
+	padding-top: 100px;
+}
+.sidebar .nav:not(.sub-menu) {
+    margin: 2.5rem;
+}
+.add-btn {
+    width: 100%;
+    font-size: 20px;
+    background: #00be9a;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    border: 1px solid #00be9a;
+}
+button.btn.create {
+    width: 100%;
+    font-size: 20px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    color: #000;
+    border: 1px solid;
+}
+.navbar .navbar-menu-wrapper{
+    color: #fff;
+}
+.navbar .navbar-menu-wrapper .navbar-nav .nav-item.dropdown .count-indicator .count {
+    position: absolute;
+    left: -5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background: #fff;
+    top: -5px;
+    border: 1px solid #ffffff;
+}
+.navbar .navbar-brand-wrapper .navbar-brand {
+    color: #fff;
+}  
+.navbar .navbar-brand-wrapper{
+    width: 350px;
+}
+.navbar .navbar-menu-wrapper{
+    width: calc(100% - 350px);
+}
+.navbar .navbar-brand-wrapper .navbar-brand:hover{
+    color: #fff;
+}
+
+/*Modal Css*/
+.search-filter{
+	border-radius: 8px;
+}
+
+.search-container #search{
+	border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+}
+
+.modal-btn{
+	background-color: #f9c339;
+	color: black;
+}
+
+.modal-btn-transprent{
+	background-color: transparent;
+	color: #f9c339;
+}
+.modal-header, .modal-footer{
+    border: 0;
+}
+
+.select2-container--default .select2-selection--single{
+	padding: 0px;
+    border: 0px solid #aaa;
+    border-radius: 0px;
+    border-bottom: 1px solid black;
+
+
+}
+
+.select2-container--default .select2-selection--single span{
+	width: 100%;
+}
+
+.select2-container--default.select2-container--focus .select2-selection--multiple,
+.select2-container--default .select2-selection--multiple {
+    border: solid black 0px;
+    outline: 0;
+    border-bottom: 1px solid black !important;
+    border-radius: 0px !important;
+}
+
+
+
+.navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group .form-control{
+	background-color: #2a4161;
+    padding: 20px;
+}
+
+/*Sidemenu CSS*/
+.sidebar .nav .nav-item.active > .nav-link i, .sidebar .nav .nav-item.active > .nav-link .menu-title, .sidebar .nav .nav-item.active > .nav-link .menu-arrow,
+.sidebar .nav .nav-item:hover > .nav-link i, .sidebar .nav .nav-item:hover > .nav-link .menu-title{
+    color: #000;
+}
+.sidebar .nav:not(.sub-menu) > .nav-item.active, .sidebar .nav:not(.sub-menu) > .nav-item:hover > .nav-link,
+.sidebar .nav .nav-item.active > .nav-link {
+    background: #f0eeef;
+    border-radius: 0 30px 30px 0;
+    border-left: 10px solid #1d3557;
+}
+.sidebar .nav .nav-item.active > .nav-link, .sidebar .nav:not(.sub-menu) > .nav-item.active:hover > .nav-link{
+    border: 0;
+}
+.nav-search#navbar-search-icon {
+    background-color: #2a4161;
+    padding-right: 15px;
+    border-radius: 0 8px 8px 0;
+}
+.sidebar{
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+}
+
+/*Dashboard CSS*/
+.card-body {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+}
+.card.card-tale {
+    background: #7DA0FA;
+    color: #000;
+}
+.dash-icon {
+    font-size: 25px;
+}
+.ellipsis-vertical {
+    font-size: 30px;
+}
+.card-details {
+    width: 100%;
+    padding-left: 25px;
+}
+.card-details p.card-title {
+    margin-bottom: 2px;
+}
+.card-details p.card-desc {
+    margin-bottom: 0;
+}
+.card .card-body {
+    border-radius: 10px;
+    box-shadow: #959da533 0px 8px 24px;
+    border: 1px solid #959da53d;
+}
+.card-body:hover {
+    background: #e3f5ff;
+}
+.card-body:hover p.card-title{
+    color: #00be9a;
+}
+i.fa.fa-ellipsis-v {
+    color: #ccc;
+}
+i.fa.fa-star {
+    display: none;
+    transition: all 0.5s;
+}
+.card-body:hover i.fa.fa-star{
+    display: block;
+    transition: all 0.5s;
+}
+.card-body:hover i.fa.fa-star-o{
+    display: none;
+    transition: all 0.5s;
+}
+
+
+.input-group-text {
+    display: flex;
+    align-items: center;
+    padding: 0.875rem 1.375rem;
+    margin-bottom: 0;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1;
+    color: #495057;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    border-radius: 2px;
+    border-left: 0px;
+    background-color: ;
+}
+
+.search-container #searchfilter2{
+    border-right: 0px;
+
+}
+
+.pagetitle{
+    text-transform: capitalize;
+}

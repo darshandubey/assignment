@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Custom Dashboard</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container-scroller">
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo" href="index.html"><span style="color: #bcdfe5;">Custom</span> Dashboard</a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item nav-search d-none d-lg-block" >
+            <div class="input-group search-container">
+              
+              <input type="text" class="form-control search-filter" id="searchfilter" placeholder="Search now" aria-label="search" aria-describedby="search">
+              <div class="input-group-prepend hover-cursor nav-search" id="navbar-search-icon">
+                <span class="input-group-text" id="search">
+                  <i class="fa fa-search"></i>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item nav-settings d-none d-lg-flex">
+            <a class="nav-link" href="#">
+              <i class="fa fa-ellipsis-v"></i>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator" id="notificationDropdown" >
+              <i class="fa fa-bell mx-0"></i>
+              <span class="count"></span>
+            </a>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle icon-user" >
+              <i class="fa fa-user"></i>
+            </a>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <div class="container-fluid page-body-wrapper">
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li>
+            <button class="btn add-btn" data-toggle="modal" data-target="#AddDataModal"> <i class=" fa fa-plus"></i> Add</button>
+          </li>
+          <li>
+            <button class="btn create"><i class=" fa fa-pencil"></i> Create</button>
+          </li>
+          <li style="border-top: 2px solid #eaeaef; margin-top: 15px; margin-bottom: 10px;"></li>
+          <li class="nav-item active tagparentfilter">
+            <a class="nav-link" >
+              <i class="fa fa-tachometer menu-icon"></i>
+              <span class="menu-title tagfilter" data-filter="">All</span>
+            </a>
+          </li>
+          <li class="nav-item tagparentfilter">
+            <a class="nav-link" aria-controls="">
+              <i class="fa fa-clock-o menu-icon"></i>
+              <span class="menu-title tagfilter" data-filter="">Recent</span>
+            </a>
+          </li>
+          <li class="nav-item tagparentfilter">
+            <a class="nav-link " aria-expanded="false" aria-controls="form-elements">
+              <i class="fa fa-star-o menu-icon"></i>
+              <span class="menu-title tagfilter" data-filter="">Starred</span>
+            </a>
+          </li>
+          <!-- #bbb -->
+          <li style="border-top: 2px solid #eaeaef; margin-top: 15px; margin-bottom: 10px;"></li>
+          <li class="nav-item tagparentfilter">
+            <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+              <i class="fa fa-wpforms menu-icon"></i>
+              <span class="menu-title tagfilter" data-filter="Test Demo">Test Demo</span>
+            </a>
+          </li>
+          <li class="nav-item tagparentfilter">
+            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-wpforms menu-icon"></i>
+              <span class="menu-title tagfilter" data-filter="Page Builder Demo">Page Builder Demo</span>
+            </a>
+          </li>
+          <li class="nav-item tagparentfilter">
+            <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+              <i class="fa fa-wpforms menu-icon"></i>
+              <span class="menu-title tagfilter" data-filter="Metabase">Metabase</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-md-12">
+                <div class="d-flex justify-content-between">
+                  <div class="col-md-4 d-flex flex-row align-items-center headline pagetitle" data-filter="All">All
+                  </div>
+                  <div class="col-md-4 ">
+                    <div class="nav-item nav-search d-none d-lg-block">
+                      <div class="input-group search-container">       
+                        <input type="text" class="form-control search-filter " id="searchfilter2" placeholder="Search now" aria-label="search" aria-describedby="search">
+                        <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                          <span class="input-group-text" id="search">
+                            <i class="fa fa-search"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div style="border-top: 2px solid #eaeaef; margin-top: 20px; margin-bottom: 30px;"></div>
+          <div class="row">
+            <div class="col-md-12 grid-margin transparent">
+              <div class="row card-dashboard">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="modal fade" id="AddDataModal" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>        
+      </div>
+      <div class="modal-body">       
+      <div class="col-12 form-group d-flex flex-column">
+        <label>Dashboard Type</label>
+        <select class="js-select2 form-control" name="dashboardtype"  id="dashboardtype">
+          <option value="">Select</option>
+          <option value="Type 1">Type 1</option>
+          <option value="Type 2">Type 2</option>
+          <option value="Type 3">Type 3</option>
+          <option value="Type 4">Type 4</option>
+        </select>
+      </div>
+      <div class="col-12 form-group d-flex flex-column">
+        <label>Dashboard Name</label>
+        <select class="js-select2 form-control" name="dashboardname"  id="dashboardname">          
+          <option value="">Select</option>
+          <option value="Dashboard 1">Dashboard 1</option>
+          <option value="Dashboard 2">Dashboard 2</option>
+          <option value="Dashboard 3">Dashboard 3</option>
+          <option value="Dashboard 4">Dashboard 4</option>
+        </select>
+      </div>
+      <div class="col-12 form-group d-flex flex-column">
+        <label>Dashboard Group</label>
+        <select class="js-select2 form-control" name="dashboardgroup"  id="dashboardgroup">         
+          <option value="">Select</option>
+          <option value="Test Demo">Test Demo</option>
+          <option value="Metabase">Metabase</option>
+          <option value="Page Builder Demo">Page Builder Demo</option>
+        </select>
+      </div>
+      <div class="col-12 form-group d-flex flex-column">
+        <label>Dashboard ID</label>
+        <select class="js-select2 form-control" name="dashboardid"  id="dashboardid">         
+          <option value="">Select</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+      <div class="col-12 form-group d-flex flex-column">
+        <label>Role ID</label>
+        <select class="js-example-basic-multiple" name="roles[]" id="roles" multiple="multiple">
+          <option value="admin">admin</option>
+          <option value="user">user</option>
+          <option value="systemadmin">systemadmin</option>
+        </select>
+      </div>
+      </div>
+      <div class="modal-footer d-flex">
+        <button type="button" class="btn btn-default modal-btn-transprent" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default modal-btn" id="savebutton" >Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<script src="vendors/js/vendor.bundle.base.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<!-- End custom js for this page-->
+<script src="https://kit.fontawesome.com/0aee105806.js" crossorigin="anonymous"></script>
+<script   src="js/custom.js"></script>
+</body>
+
+</html>
+
